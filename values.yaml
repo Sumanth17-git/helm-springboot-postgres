@@ -1,0 +1,26 @@
+app:
+  name: springboot-app
+  image: sumanth17121988/springbootdb
+  tag: "1"
+  port: 9090
+  replicas: 2
+
+postgres:
+  name: postgres
+  image: postgres:15
+  port: 5432
+  dbName: springbootdb
+  username: postgres
+  password: admin@123
+  storageSize: 5Gi
+  storageClass: managed-premium-retain-sc
+  createStorageClass: true
+
+resources:
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+

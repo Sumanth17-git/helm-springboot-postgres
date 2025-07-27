@@ -1,0 +1,26 @@
+app:
+  name: springboot-app
+  image: sumanth17121988/springbootdb
+  tag: "1"                  # Use a stable version tag for production
+  port: 9090
+  replicas: 4              # Increased replicas for high availability
+
+postgres:
+  name: postgres
+  image: postgres:15
+  port: 5432
+  dbName: springbootdb
+  username: prod_user
+  password: ProdSecurePass@2025  # Stronger password for production
+  storageSize: 20Gi             # Larger volume for production data
+  storageClass: managed-premium-retain-sc
+  createStorageClass: false     # Avoid creating in prod if already managed
+
+resources:
+  limits:
+    memory: "100Mi"
+    cpu: "100m"
+  requests:
+    memory: "100Mi"
+    cpu: "100m"
+

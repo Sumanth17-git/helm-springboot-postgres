@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+data:
+  database_name: "{{ .Values.postgres.dbName }}"
+  database_url: "jdbc:postgresql://{{ .Values.postgres.name }}:{{ .Values.postgres.port }}/{{ .Values.postgres.dbName }}"
+  database_service_url: "jdbc:postgresql://{{ .Values.postgres.name }}-loadbalancer:{{ .Values.postgres.port }}/{{ .Values.postgres.dbName }}"
+
