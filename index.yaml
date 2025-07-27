@@ -3,12 +3,12 @@ entries:
   springboot-postgres:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-07-27T17:13:11.065486147Z"
+    created: "2025-07-27T17:21:20.623280429Z"
     description: A Helm chart for Kubernetes
-    digest: 7b69f0410f637faefd0d9bea54b9835caf6ee3eb4fe819c506d183cdf698d609
+    digest: 0fb45d1dbf4de7c03459751995d62e3a7ac44c66d929bc9c09a06adc068728fa
     name: springboot-postgres
     type: application
     urls:
     - https://sumanth17-git.github.io/helm-springboot-postgres/springboot-postgres-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-27T17:13:11.056995752Z"
+generated: "2025-07-27T17:21:20.621330733Z"
